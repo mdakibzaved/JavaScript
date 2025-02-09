@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <!-- JavaScript -->
+    <script>
+        
+        // Custom Error
+        try {
+            // name    
+            let Age = prompt(" Enter Your Age ")
+            if(Age>140){
+                throw new ReferenceError("PagalHoGyaHaiError")
+            }
+        } catch (error) {
+            console.log(error.name)  //error name
+            console.log(error.message)  //why error occurs msg
+            console.log(error.stack)   //both name,message give
+        }
+    </script>
+    
+</body>
+</html>

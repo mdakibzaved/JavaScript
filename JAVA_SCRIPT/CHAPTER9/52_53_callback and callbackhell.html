@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- JavaScript -->
+    <script>
+      // Callbacks
+      loadScript = (url, callback) => {
+        let script = document.createElement("script");
+        script.src = url;
+
+        script.onload = () => {
+          callback(null, url);
+        };
+        script.onerror = () => {
+          callback(new Error("error Occurs__ "), url);
+        };
+
+        document.body.appendChild(script);
+      };
+
+      loadScript(
+        "https://cdn.jsdlivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js",
+        (fun = (error, src) => {
+          if (error) {
+            console.log(error, src);
+          } else {
+            console.log("hello script Loaded " + src);
+          }
+        
+
+        /*PARAMID OF DOM (CALLBACK HELL)*/
+        //   loadScript(
+        //     "https://cdn.jsdlivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js",
+        //     (fun = (error, src) => {
+        //       if (error) {
+        //         console.log(error, src);
+        //       } else {
+        //         console.log("hello script Loaded " + src);
+        //       }
+
+        //       loadScript(
+        //         "https://cdn.jsdlivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js",
+        //         (fun = (error, src) => {
+        //           if (error) {
+        //             console.log(error, src);
+        //           } else {
+        //             console.log("hello script Loaded " + src);
+        //           }
+
+        //           loadScript(
+        //             "https://cdn.jsdlivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js",
+        //             (fun = (error, src) => {
+        //               if (error) {
+        //                 console.log(error, src);
+        //               } else {
+        //                 console.log("hello script Loaded " + src);
+        //               }
+
+        //               loadScript(
+        //                 "https://cdn.jsdlivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js",
+        //                 (fun = (error, src) => {
+        //                   if (error) {
+        //                     console.log(error, src);
+        //                   } else {
+        //                     console.log("hello script Loaded " + src);
+        //                   }
+
+        //                   loadScript(
+        //                     "https://cdn.jsdlivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js",
+        //                     (fun = (error, src) => {})
+        //                   );
+        //                 })
+        //               );
+        //             })
+        //           );
+        //         })
+        //       );
+        //     })
+        //   );
+        })
+      );
+    </script>
+  </body>
+</html>

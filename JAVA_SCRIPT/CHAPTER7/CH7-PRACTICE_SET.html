@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*PRESET*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .container{
+            width: 1180px;
+            margin-inline:auto;  /*For Center*/
+        }
+        .flex{
+            display: flex;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        li{
+            list-style-type: none;
+        }
+        /* Styling */
+        .btn{
+            padding: 0.5rem 1.5rem;
+            background-color:rgba(127, 255, 212, 0.847);
+            color: #fff;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .bold-logo{
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .main-nav{ 
+            justify-content: space-between;
+            padding: 0.8rem 1.5rem;
+        }
+        .nav-list{
+            row-gap: 10px;
+            margin-inline: 0.8rem;
+        }
+        nav{
+            background-color:rgba(68, 130, 133, 0.872);
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="container main-nav flex">
+            <div class="bold-logo">AKIBZAVED</div>
+            <div>
+                <ul class="flex nav-list">
+                    <li class="nav-list"><a class="a-l" href="#">Home</a></li>
+                    <li class="nav-list"><a class="a-l" href="#">About</a></li>
+                    <li class="nav-list"><a class="a-l" href="#">Service</a></li>
+                    <li class="nav-list"><a class="a-l" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="btn">Subscribe</div>
+        </div>
+    </nav>
+    
+    <!-- Table -->
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>EnrollNo</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>AKIB</td>
+            <td>32</td>
+            <td>499</td>
+        </tr>  
+    </table>
+  
+    <!-- 3 Child Element -->
+    <div class="baap" style="margin-top: 25px;">
+        <div class="child">Beta Ankush</div>
+        <div class="child">Beta Lalit</div>
+        <div class="child">Beta Sohail</div>
+    </div>
+     
+    <ul class="time" style="margin-top:40px;">
+        <li>BAAP OF TIME TABLE</li>
+        <li>10 aM CSS </li>
+        <li>12 aM lEARNING ABOUT OWL😂</li>
+        <li>3 aM lEARNING ABOUT Churail😂</li>
+    </ul>
+
+
+
+    <script>
+        /*
+        // 1
+        document.getElementsByClassName("a-l")[2].style.color="red" */
+
+        //2 tbody is present due to autoCorrection
+
+        //3
+        document.getElementsByClassName("baap")[0].firstElementChild.style.color="green"
+        document.getElementsByClassName("baap")[0].lastElementChild.style.color="green"
+
+        //4
+        Array.from(document.getElementsByClassName("time")[0].children).forEach((element)=>{
+            element.style.background = "cyan";
+        })
+
+    </script>
+    
+</body>
+</html>

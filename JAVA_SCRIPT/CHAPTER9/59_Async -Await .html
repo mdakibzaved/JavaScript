@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+
+        // async await
+        let Marry = async()=>{
+            let delhiWeather = new Promise ((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("Delhi Waether: 27-degree")
+                },2000)
+            })
+
+            let BiharWeather = new Promise ((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("Bihar Waether: 60-degree")
+                },6000)
+            })
+             
+            console.log("Delhi Weather is Fetching ...")
+            delhiW = await delhiWeather;
+            console.log("Delhi Weather is Fetched " + delhiW)
+            
+            console.log("Bihar Weather is Fetching ...")
+            BiharW = await BiharWeather;
+            console.log("Biahr Weather is Fetched " + BiharW)
+
+            return [delhiW,BiharW];
+        }
+
+        let akib = async()=>{
+            console.log(" Iam WaitinG ")
+        }
+
+
+        const MainHome = async ()=>{
+            console.log(" Welcome to Weather Control Room ")
+
+            let a = await Marry()   //resolve hone ke Baad value aati h_   so here we can't write a.then
+            let b = await akib()
+            console.log(a)
+        }
+        MainHome()
+        
+
+    </script>
+    
+</body>
+</html>

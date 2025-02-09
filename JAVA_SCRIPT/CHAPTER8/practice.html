@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Document</title>
+</head>
+<style>
+    .bulb {
+        color: yellow;
+        border-radius: 50%;
+        margin-inline: auto;
+    }
+    .main-bulb .bxs-bulb {
+        font-size: 25rem;
+    }
+    .flex {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8rem;
+    }
+</style>
+<body>
+
+        <div  class="main-bulb flex"><i id="bulb" class='bx bxs-bulb bulb'></i></div>
+
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+
+        setInterval(glow = () =>{
+            bulb.classList.toggle("bulb")
+        },300)
+    </script>
+    
+</body>
+</html>
+

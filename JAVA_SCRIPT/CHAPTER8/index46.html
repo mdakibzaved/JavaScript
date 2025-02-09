@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeOut and setInterval</title>
+</head>
+<body>
+
+    <script>
+        
+
+        // //setTimeout Ek bar
+        // alert("Hello ")
+        // let a = setTimeout(sayhello=()=> {
+        //     alert("Iam Inside of setTimeOut it will after 5s")
+        // },5000)
+        // clearTimeout(a)
+
+        // const sum = (a,b) => {
+        //     alert("Sum: " + (a+b))
+        // }
+        // setTimeout(sum,2000,1,4)
+
+
+
+        // setTimeInterval
+        // setInterval (hello = () =>{
+        //     alert("setinterval")
+        // },3000)
+
+        const msg = (a,b) => {
+            alert("what are doing main!"+(a+b))
+        }
+        let id = setInterval(msg,5000,785,1)
+        clearInterval(id)
+
+
+
+    </script>
+    
+</body>
+</html>

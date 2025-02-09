@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListner removeEventListner</title>
+</head>
+<body>
+
+    <button id="first">click Me</button>
+
+
+    <!-- JavaScript -->
+    <script>
+        let x = fun1 = (e) => {  //e is event object
+            // alert("Hello1")
+            console.log(e.target)
+            console.log(e.type,e.clientX , e.clientY)
+            // console.log(e.EventType)
+        }
+        let y = fun2 = (e) => {
+            // alert("Hello2")
+        }
+        first.addEventListener('click',x)
+        first.addEventListener('click',y)
+
+        let num = prompt("What is your favorite number! ")
+
+        if(num == '2') {
+            first.removeEventListener('click',y);
+        }
+
+    </script>
+    
+</body>
+</html>

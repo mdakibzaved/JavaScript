@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassName and classList</title>
+</head>
+<style>
+    .yellow {
+        background: yellow;
+        color: rgb(0, 42, 255);
+        font-size: 1.5rem;
+    }
+    .red {
+        background: red;
+        color: chartreuse;
+        font-size: 2rem;
+    }
+</style>
+
+<body>
+
+    <div id="first" class="red akib">
+        <span>hey Iam Good in my House</span>
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script>
+        f = document.getElementById('first')
+        // f.className = "yellow"
+
+
+        // console.log(f.classList)  //list of class in f
+        // f.classList.remove("red")  
+        f.classList.add("dhoom") 
+        f.classList.toggle("dhoom") 
+        f.classList.contains("red")   //true or flase
+    </script>
+    
+</body>
+</html>
