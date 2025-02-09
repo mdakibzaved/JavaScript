@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseEvent</title>
+</head>
+<style>
+    body{
+        font-size: 30px;
+        font-family:monospace ;
+        background-color: gray;
+    }
+</style>
+
+<body>
+    <p id="mEvent" onmousedown="Red()" onmouseup="blue()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, rem recusandae maiores reprehenderit eveniet aperiam tenetur dignissimos corporis expedita impedit ratione minu Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut reprehenderit quos, distinctio provident id officiis optio veniam libero nisi voluptatem labore delectus ab sed facere! Enim quas illum dolor totam.    </p> <hr>
+    
+    <p id="mEL" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque quos perspiciatis commodi, fugit necessitatibus nihil quis excepturi placeat assumenda quia fuga consectetur dolorem ut beatae dicta ea harum quo!</p> <hr>
+   
+    <script>
+        const Red = () => {
+            document.getElementById('mEvent').style.color = "red";
+        }
+
+        function blue(){
+            document.getElementById('mEvent').style.color = "blue";
+        }
+
+        var MouseEnter =document.getElementById('mEL');
+        MouseEnter.addEventListener('mouseenter', ()=>{
+            console.log("Mouse Enter Bro");
+            MouseEnter.style.backgroundColor= 'green';
+        });
+
+        var MouseLeave =document.getElementById('mEL');
+        MouseLeave.addEventListener('mouseleave', ()=>{
+            console.log("Mouse Leave Bro");
+            MouseEnter.style.backgroundColor= 'yellow';
+        });
+
+
+    </script>
+    
+    
+</body>
+</html>

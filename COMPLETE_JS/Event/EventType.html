@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event types</title>
+</head>
+<body>
+    <style>
+          .btn{
+            background-color: blueviolet;
+            height: 67px;
+            width: 185px;
+            margin: 100px auto;
+            border-radius: 6px;
+            box-shadow: 0 6px 6px  rgba(0,0,0,0.3);
+          }
+          .btn:hover{
+            background-color: rgb(22, 22, 255);
+            cursor: pointer;
+          }
+          p{
+            font-family: sans-serif;
+            box-sizing: border-box;
+            text-align: center;
+            padding-top: 25px;
+            color: #fff;
+          }
+    </style>
+
+
+    <div class="parent">
+         <div class="btn way-1 " onclick="alert('direct method use inside a div tag Directly🤘🔥 ')">
+            <p>Simple Inline Alert()</p>
+         </div>
+
+         <div class="btn " onclick="callingFun()">
+            <p>By Calling a Function</p>
+         </div>
+
+         <div class="btn " id="thirdWays">
+            <p>Inline Event</p>
+         </div>
+
+         <div class="btn " id="fourthWays">
+            <p>Event Listner</p>
+         </div>
+
+    </div>
+
+
+
+    <!-- JAVA-SCRIPT -->
+    <script>
+
+        //way-2
+        const callingFun = () => {
+            alert("Call function common Way!!");
+        }
+
+        //way-3 :- using refrence  :: In this onclick event  bottom function will works only at time one will works 🤷‍♂️!
+        var thirdWay = document.querySelector('#thirdWays')
+        thirdWays.onclick = function() {
+            alert("Most Common way of writting Function");
+        }
+        var thirdWay = document.querySelector('#thirdWays')
+        thirdWays.onclick = function() {
+            console.log("Most Common way of writting Function");
+        }
+
+
+        //way-4 :- benifit of EventListener is you can call same event again & again 
+        var fourthWays = document.querySelector('#fourthWays');
+        fourthWays.addEventListener('click',() =>{
+            alert('I want love from this way' );
+        })
+        
+        var fourthWays = document.querySelector('#fourthWays');
+        fourthWays.addEventListener('click',() =>{
+            console.log('I want love from this way' );
+        })
+    </script>
+   
+</body>
+</html>

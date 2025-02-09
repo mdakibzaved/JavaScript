@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+
+<body>
+
+    <!-- CSS -->
+    <style>
+        body {
+            background-color: rgba(100, 148, 237, 0.855);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;   }
+        
+
+        p,.para,
+        #head,
+        button,
+        h2 {
+            text-align: center;  }
+        
+
+        p {
+            font-weight: bold;   }
+        
+
+        #btn {
+            margin: 40px auto;
+            display: block;
+            border-radius: 6px;
+            background-color: blue;
+            height: 55px;
+            width: 125px;
+            border: 2px solid blue;
+            color: #fff;
+            font-size: 900;    }
+       
+
+        h1{
+            color: #fff;  }
+        
+
+        #btn:hover {
+            cursor: pointer;
+            background-color:rgb(31, 55, 237);  }
+        
+
+        form {
+            display: block;
+            margin: 15px auto;   }
+        
+        .child{
+            display: flex;
+            text-align: center;
+            justify-content: center;   }
+
+        .cpren{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            
+        }
+        
+    </style>
+
+    <!-- html -->
+    <p class="para">hello Guys welcome to my channal ¯\_(ツ)_/¯ </p>
+    <p class="para">hello gice welcome to my channal ㄟ( ▔, ▔ )ㄏ</p>
+    <p>this is Aamir Khan</p>
+    <h2>Don't forget to like and subscribe </h2>
+    <h1 id="head">Change content Here</h1>
+
+    <!-- Form -->
+    <div class="form">
+
+        <div class="child">
+            <form action="">
+            <label for="">male</label>
+            <input type="radio" name="gender" id="">
+            <label for="">female</label>
+            <input type="radio" name="gender" id="">
+            <label for="">Others</label>
+            <input type="radio" name="gender" id="">
+        </form>
+        </div>
+       
+    </div>
+
+    <div class="paren">
+        <div class="cpren">
+             <li id="d">HTML</li>
+             <li class="a">CSS</li>
+             <li class="a">JAVA-SCRIPT</li>
+        </div>     
+    </div>
+
+
+    <button id="btn" onclick="changeContent()">ClICK ME :)</button>
+
+
+
+
+    <!-- JAVA SCRIPT -->
+    <script>
+        const changeContent = () => {
+            // document.getElementById("head").innerHTML = "THIS IS AKIB ZAVED :) ";
+            document.querySelector('#head').innerHTML = 'AKIB-Zaved   ㄟ( ▔, ▔ )ㄏ';
+
+            //By refrence 
+            // const b = document.getElementById('head');
+            // b.innerHTML = "THIS IS AKIB ZAVED";
+
+            //By ClassName
+            // console.log(document.getElementsByClassName('para'));
+
+            // console.log(document.getElementsByTagName('p'));
+
+            console.log(document.getElementsByName('gender'));
+
+            /* Note:- getElemntById() is only select id but by querySelector() you can select id as well as class */
+
+
+            document.querySelector('.para').innerHTML = 'ADIL SHAIKH （￣︶￣）↗　';   // only change first matching value either id or class
+            console.log( document.querySelectorAll('.para'));          //used to check how many para class are present 
+            
+
+            console.log(document.querySelector('#d')).innerHTML;
+            console.log(document.querySelector('li.a')).innerHTML;
+            console.log(document.querySelector('.a')).innerHTML;
+        }
+    </script>
+
+</body>
+</html>

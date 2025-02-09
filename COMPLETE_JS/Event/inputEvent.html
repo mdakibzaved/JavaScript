@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Event</title>
+</head>
+<body>
+    <!-- CSS -->
+    <style>
+
+        .Forms{
+            background-color: lavender;
+            height: 90vh;
+            width: 40vw;
+            border-radius: 5px;
+            margin-left: 500px;
+        }
+    
+        input,select {
+            display: block;
+            height: 50px;
+            width: 450px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            font-size: 25px;
+            border: 1px solid gray;
+        }
+        p{
+            font-family: monospace;
+            text-align: center;
+            font-size: 30px;
+        }
+        .childOne{
+            padding-top: 50px;
+        }
+        #result{
+            color: #fff;
+            font-size: 20px;
+            opacity: 2;
+            color: gray;  
+        }
+       
+        
+
+
+    </style>
+
+
+
+
+    <div class="Forms">
+
+        <form action="">
+            <div class="childOne">
+                <p>Enter Your Name Here : </p>
+                <label for="Name"></label>
+                <div class="child-1-one"><input type="text" id="Name" placeholder="Enter your here "></div>
+            </div>
+            
+
+            <div class="child-2">
+                <p>Choose Your Flavour :</p>
+                <label for="Flavour : ">
+                <div class=" child-1-one"><select name="iceCream" id="iceCream" onchange="selectElement()">
+                    <option value="Mangoes">Mangoes</option>
+                    <option value="Coco">Coco</option>
+                    <option value="DarkChocolate">dark chocolate</option>
+                    <option value="Orange">Orange </option>
+                </select></div>
+                <div ><p id="result" ></p></div>
+            </label>
+            </div>
+            
+            
+        </form>
+    </div>
+
+
+    <!-- JAVA-SCRIPT -->
+    <script>
+        const selectElement = () =>{
+              const inputChange = document.getElementById('Name').value;
+              const iceCream = document.getElementById('iceCream').value;  //.value because we are inputting
+
+              console.log(` ${inputChange} and ${iceCream} `);
+
+              const Result = document.getElementById('result');
+              Result.innerHTML = `Mr ${inputChange}  selected  ${iceCream}  flavour iceCream`;
+        }
+      
+
+
+    </script>
+    
+</body>
+</html>

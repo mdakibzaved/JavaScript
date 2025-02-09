@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+          .btn{
+            font-size: 20px;
+            background-color: blueviolet;
+            height: 67px;
+            width: 185px;
+            margin: 100px auto;
+            border-radius: 6px;
+            box-shadow: 0 6px 6px  rgba(0,0,0,0.3);
+          }
+          .btn:hover{
+            background-color: rgb(22, 22, 255);
+            cursor: pointer;
+          }
+          p{
+            font-family:monospace;
+            font-weight: 700;
+            font-size: 30px;
+            text-align: center;
+
+          }
+          #s{
+            box-sizing: border-box;
+            font-size: 20px;
+            padding-top: 20px;
+            color: #fff;
+          }
+    </style>
+
+    <div class="parent">
+        <p>Let See What is Event Object 🤖</p>
+        <div class="btn" id="fourthWay">
+            <p  id="s">Event Listener</p>
+        </div>
+    </div>
+    
+    <!-- JS -->
+    <script>
+        const fourthWay = document.getElementById('fourthWay');
+
+        const checkEvent = () =>{
+            alert('We are see Event Object');
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+        }
+
+        fourthWay.addEventListener('click',checkEvent);
+    </script>
+</body>
+</html>
